@@ -72,3 +72,12 @@ aws iam list-policies
 
 ### get policy info
 aws iam list-policies --query 'Policies[?PolicyName==\`AmazonEC2FullAccess\`]'
+
+### view existing attach policy to group
+aws iam list-attached-group-policies --group-name MyGroupCli
+
+### create user login profile
+aws iam create-login-profile --user-name MyUserCli --password "@@Xxx123456789" --password-reset-required
+
+### create policy statement
+aws iam create-policy --policy-name changePwd --policy-document 'file://[path-to-json-policy-file]'
