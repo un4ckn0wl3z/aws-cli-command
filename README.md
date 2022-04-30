@@ -1,12 +1,12 @@
 ## EC2 commands
 
 ### create ec2 instances
-aws ec2 run-instances 
-    --image-id [xxx] 
-    --count 1 
-    --instance-type [xxx]
-    --key-name [xxx]
-    --security-group-ids [xxx]
+aws ec2 run-instances <br>
+    --image-id [xxx] <br>
+    --count 1 <br>
+    --instance-type [xxx] <br>
+    --key-name [xxx] <br>
+    --security-group-ids [xxx] <br>
     --subnet-id [xxx]
 
 
@@ -92,5 +92,5 @@ aws configure
 aws configure set aws_access_key_id xxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ### temporary switch to another user by export environment variables
-export AWS_ACCESS_KEY_ID=xxxx
+export AWS_ACCESS_KEY_ID=xxxx <br>
 export AWS_SECRET_ACCESS_KEY=xxxx
