@@ -42,3 +42,33 @@ aws ec2 describe-instances
 aws ec2 describe-instances --filters "Name=instance-type, Values=t2.micro" --query "Reservations[].Instances[].InstanceId"
 
 ## IAM commands
+
+### create IAM group
+aws iam create-group --group-name MyGroupCli
+
+### create IAM user
+aws iam create-user --user-name MyUserCli
+
+### add user to group
+aws iam add-user-to-group --user-name MyUserCli --group-name MyGroupCli
+
+### describe IAM group
+aws iam get-group --group-name MyGroupCli
+
+### assign policy to IAM group
+aws iam attach-group-policy --group-name MyGroupCli --policy-arn arn:aws:iam::aws:policy/AmazonEC2FullAccess
+
+### assign policy to IAM user
+aws iam attach-user-policy --user-name MyUserCli --policy-arn arn:aws:iam::aws:policy/AmazonEC2FullAccess
+
+### list users
+aws iam list-users
+
+### list groups
+aws iam list-groups
+
+### list policies
+aws iam list-policies
+
+### get policy info
+aws iam list-policies --query 'Policies[?PolicyName==`AmazonEC2FullAccess`]'
