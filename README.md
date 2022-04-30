@@ -81,3 +81,16 @@ aws iam create-login-profile --user-name MyUserCli --password "@@Xxx123456789" -
 
 ### create policy statement
 aws iam create-policy --policy-name changePwd --policy-document 'file://[path-to-json-policy-file]'
+
+### create user access key
+aws iam create-access-key --user-name MyUserCli
+
+### override default user config
+aws configure
+
+### override user value config by specific key
+aws configure set aws_access_key_id xxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+### temporary switch to another user by export environment variables
+export AWS_ACCESS_KEY_ID=xxxx
+export AWS_SECRET_ACCESS_KEY=xxxx
