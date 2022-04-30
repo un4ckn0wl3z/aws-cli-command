@@ -1,6 +1,3 @@
-# aws-cli-command
-useful AWS cli commands
-
 ## EC2 commands
 
 ### create ec2 instances
@@ -13,13 +10,13 @@ aws ec2 run-instances
     --subnet-id [xxx]
 
 
-#### describe ec2 security groups
+### describe ec2 security groups
 aws ec2 describe-security-groups
 
-#### describe ec2 vpc
+### describe ec2 vpc
 aws ec2 describe-vpcs
 
-#### create new security group by specific vpc id
+### create new security group by specific vpc id
 aws ec2 create-security-group --group-name my-sg --description "My second security group" --vpc-id [xxx]
 
 ### describe ec2 security groups by specific ids
