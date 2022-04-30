@@ -71,4 +71,4 @@ aws iam list-groups
 aws iam list-policies
 
 ### get policy info
-aws iam list-policies --query 'Policies[?PolicyName==`AmazonEC2FullAccess`]'
+aws iam list-policies --query 'Policies[?PolicyName==\`AmazonEC2FullAccess\`]'
